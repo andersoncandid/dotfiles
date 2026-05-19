@@ -7,7 +7,11 @@
 cd ~/dotfiles
 stow <package name>
 ```
+<br>
+
 ---
+
+<br>
 
 ## neovim configuration manual
 
