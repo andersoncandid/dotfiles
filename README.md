@@ -1,4 +1,4 @@
-## my configuration dotfiles
+# my configuration dotfiles
 
 #### **usage:**
 
@@ -7,10 +7,6 @@
 cd ~/dotfiles
 stow <package name>
 ```
-<br>
-
----
-
 <br>
 
 ## neovim configuration manual
