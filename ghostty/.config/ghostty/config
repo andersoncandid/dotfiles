@@ -1,0 +1,42 @@
+## Themes Configs
+#theme = Adwaita Dark
+#theme = tokyonight_night.conf
+theme = catppuccin-mocha.conf
+#theme = Carbonfox
+#theme = Nightfox
+#theme = Kanagawa Wave
+#theme = Gruvbox Dark
+#theme = Night Owl
+
+background-opacity = 0.95
+
+## Custom Keybinds
+keybind = alt+q=toggle_tab_overview
+
+## Font Settings
+font-family = JetBrainsMonoNL Nerd Font
+#font-family = Hack Nerd Font
+#font-family = FiraCode Nerd Font
+font-size = 14
+
+## Window size and padding
+window-height = 39
+window-width = 160
+# window-padding-y = 10,1
+
+## Window Aparence
+gtk-tabs-location = hidden
+gtk-titlebar-hide-when-maximized = true
+window-theme = ghostty
+# gtk-titlebar = false
+
+## Cursor Preferences
+cursor-style = block
+cursor-style-blink = true
+shell-integration-features = no-cursor
+
+
+
+
+
+
