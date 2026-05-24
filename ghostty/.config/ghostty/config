@@ -19,16 +19,15 @@ font-family = JetBrainsMonoNL Nerd Font
 #font-family = FiraCode Nerd Font
 font-size = 14
 
-## Window size and padding
+## Window size
 window-height = 39
 window-width = 160
-# window-padding-y = 10,1
 
 ## Window Aparence
 gtk-tabs-location = hidden
 gtk-titlebar-hide-when-maximized = true
 window-theme = ghostty
-# gtk-titlebar = false
+#gtk-titlebar = false
 
 ## Cursor Preferences
 cursor-style = block
@@ -36,7 +35,7 @@ cursor-style-blink = true
 shell-integration-features = no-cursor
 
 
-
-
-
+##--- Clean window ---##
+window-decoration = server
+window-padding-y = 10,2
 
