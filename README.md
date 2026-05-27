@@ -9,6 +9,22 @@ stow <package name>
 ```
 <br>
 
+## i3wm External Requirements
+
+- i3wm
+    - Install via apt
+- picom
+    - Build from source: [picom](https://github.com/yshui/picom)
+- xcape
+    - Install via apt
+- feh
+    - Install via apt
+- polybar
+    - Install via apt
+- rofi
+    - Install via apt
+
+
 ## neovim configuration manual
 
 **my personal neovim ide configuration**
@@ -31,7 +47,7 @@ stow <package name>
 - language support:
   - javascript/typescript: 'npm'
   - python: 'pip'
-  - any other language you may use...
+  - any other language you may use
 - linting to prose:
   - [vale](https://docs.vale.sh/)
   - config file:$home/.config/vale
