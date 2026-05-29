@@ -127,6 +127,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Custom Alias
 alias rm='rm -i'
@@ -136,7 +139,7 @@ alias gg='ghostty +list-keybinds'
 alias limpeza='sudo apt autoclean && sudo apt autoremove && sudo apt update && sudo apt upgrade'
 alias tela-off='xset dpms force off'
 alias project='cd Anderson/Projetos/odin_project'
-alias py='pyenv shell 3.13.7'
+alias py='pyenv shell 3.14.5'
 
 # External modern programs
 alias ls='eza' # https://github.com/eza-community/eza
@@ -163,9 +166,6 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 
 # PS1="\[\e[1;34m\]\w \[\e[0;33m\]\$(__git_ps1 '(󰘬 %s)')\n\[\e[1;32m\]󰜴\[\e[0m\] "
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
