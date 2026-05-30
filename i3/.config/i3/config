@@ -31,6 +31,11 @@ exec --no-startup-id ~/.config/polybar/launch.sh
 # is used in the bar {} block below.
 font pango:JetBrainsMonoNL Nerd Font 12
 
+# Rofi (program launcher)
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+space exec --no-startup-id rofi -show combi
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
