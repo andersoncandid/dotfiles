@@ -156,16 +156,17 @@ alias vscode-disable='sudo mv /etc/apt/sources.list.d/vscode.sources /etc/apt/so
 alias vscode-enable='sudo mv /etc/apt/sources.list.d/vscode.sources.disabled /etc/apt/sources.list.d/vscode.sources && sudo apt update'
 
 # Custom Git Prompt
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUPSTREAM="auto"
+# export GIT_PS1_SHOWDIRTYSTATE=1
+# export GIT_PS1_SHOWUNTRACKEDFILES=1
+# export GIT_PS1_SHOWSTASHSTATE=1
+# export GIT_PS1_SHOWUPSTREAM="auto"
 
-# Old version
-# PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\w \[\e[0;33m\]\$(__git_ps1 '(󰘬 %s)')\[\e[0m\]  \A\n "
-
+# Version 1
 # PS1="\[\e[1;34m\]\w \[\e[0;33m\]\$(__git_ps1 '(󰘬 %s)')\n\[\e[1;32m\]󰜴\[\e[0m\] "
 
-
+# Version 2
+# PS1="\[\e[1;38;5;111m\]\w\[\e[1;38;5;224m\]\$(__git_ps1 ' 󰘬 %s')\n\[\e[1;38;5;114m\]󰜴 \[\e[0m\]"
+#
+#
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"

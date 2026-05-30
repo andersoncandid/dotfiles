@@ -11,17 +11,21 @@
 
 set $mod Mod4
 
-# Polkit authetication agent
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+#XFCE4 components
+exec --no-startup-id /usr/lib/x86_64-linux-gnu/xfce4/auth/xfce-polkit
+exec --no-startup-id xfsettingsd
+exec --no-startup-id light-locker
+
+# NOTE: Un-comment the line below if using this config on a laptop
+# exec --no-startup-id xfce4-power-manager
+
+# light-locker(mint locker screen) key
+bindsym $mod+Shift+x exec --no-startup-id light-locker-command -l
 
 exec_always --no-startup-id xcape -e 'Super_L=Escape'
 exec_always --no-startup-id ~/.config/feh/random_wallpaper.sh
 exec --no-startup-id picom
 exec --no-startup-id ~/.config/polybar/launch.sh
-
-# kill any hanging polybar processes
-# exec_always --no-startup-id killall polybar
-# exec_always --no-startup-id polybar
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -40,7 +44,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -78,13 +83,13 @@ bindsym $mod+q kill
 # TODO: usar mod+Escape ou mod+Delete para abrir o powermenu
 
 # flameshot printscreen
-bindsym $mod+Insert exec --no-startup-id flameshot gui
+bindsym $mod+F12 exec --no-startup-id xfce4-screenshooter
 
 # Brave browser
 bindsym $mod+b exec --no-startup-id i3-msg workspace 2; exec brave-browser-stable;
 
-# Nemo - Cinnamom File Manager
-bindsym $mod+n exec --no-startup-id nemo
+# Thunar - xfce File Manager
+bindsym $mod+n exec --no-startup-id thunar
 
 # start rofi (a program launcher)
 bindsym $mod+i exec --no-startup-id rofi -show combi

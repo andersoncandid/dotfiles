@@ -15,7 +15,16 @@ return {
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Pare
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      require('mini.surround').setup({
+        mappings = {
+          add = 'gsa',
+          delete = 'gsd',
+          find = 'gsf',
+          find_left = 'gsF',
+          highlight = 'gsh',
+          replace = 'gsr',
+        },
+      })
 
       -- Simple and easy statusline.
       -- local statusline = require('mini.statusline')
