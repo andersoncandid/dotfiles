@@ -16,7 +16,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import "~/.config/rofi/colors.rasi"
+@import "~/.config/rofi/catppuccin.rasi"
 @import "~/.config/rofi/powermenu/powermenu_fonts.rasi"
 
 /*
