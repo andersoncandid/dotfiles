@@ -25,6 +25,9 @@ configuration {
   max-history-size:           25;
   sort:                       true;
   sorting-method:             "fzf";
+  hover-select:               true;
+  me-select-entry:            "";
+  me-accept-entry:            "MousePrimary";
 }
 
 /*****----- Global Properties -----*****/

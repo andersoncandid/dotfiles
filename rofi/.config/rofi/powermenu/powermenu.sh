@@ -12,14 +12,20 @@ theme='powermenu'
 # CMDs
 host="$(hostname)"
 
-# Options
-shutdown=' Desligar'
-reboot=' Reiniciar'
-lock=' Bloquear'
-suspend=' Suspender'
-logout=' Encerrar'
-yes=' Sim'
-no=' Não'
+shutdown=''
+reboot=''
+lock=''
+suspend=''
+logout=''
+
+# Options with text
+# shutdown=' Desligar'
+# reboot=' Reiniciar'
+# lock=' Bloquear'
+# suspend=' Suspender'
+# logout=' Encerrar'
+# yes=' '
+# no=''
 
 # Rofi CMD
 rofi_cmd() {
@@ -41,14 +47,9 @@ confirm_cmd() {
 		-theme "${dir}/${theme}.rasi"
 }
 
-# Ask for confirmation
-confirm_exit() {
-	echo -e "$yes\n$no" | confirm_cmd 'Tem certeza?'
-}
-
 # Ask shutdown for confirmation
 confirm_shutdown() {
-	echo -e "$yes\n$no" | confirm_cmd '  Desligar ?'
+	echo -e "$yes\n$no" | confirm_cmd ' Desligar?'
 }
 
 # Pass variables to rofi dmenu
@@ -58,30 +59,25 @@ run_rofi() {
 
 # Execute Command
 run_cmd() {
-	selected="$(confirm_exit)"
-	if [[ "$selected" == "$yes" ]]; then
-		if [[ $1 == '--shutdown' ]]; then
-			systemctl poweroff
-		elif [[ $1 == '--reboot' ]]; then
-			systemctl reboot
-		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
-			amixer set Master mute
-			systemctl suspend
-		elif [[ $1 == '--logout' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
-				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
-				bspc quit
-			elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
-				i3-msg exit
-			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
-				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
-			fi
-		fi
-	else
-		exit 0
-	fi
+  if [[ $1 == '--shutdown' ]]; then
+    systemctl poweroff
+  elif [[ $1 == '--reboot' ]]; then
+    systemctl reboot
+  elif [[ $1 == '--suspend' ]]; then
+    mpc -q pause
+    amixer set Master mute
+    systemctl suspend
+  elif [[ $1 == '--logout' ]]; then
+    if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
+      openbox --exit
+    elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
+      bspc quit
+    elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
+      i3-msg exit
+    elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
+      qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+    fi
+  fi
 }
 
 # Direct shutdown confirmation
