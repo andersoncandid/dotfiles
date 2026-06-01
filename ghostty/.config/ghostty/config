@@ -1,7 +1,6 @@
 ## Themes Configs
-#theme = Adwaita Dark
-#theme = tokyonight_night.conf
-theme = catppuccin-mocha.conf
+theme = tokyonight_night.conf
+#theme = catppuccin-mocha.conf
 #theme = Carbonfox
 #theme = Nightfox
 #theme = Kanagawa Wave

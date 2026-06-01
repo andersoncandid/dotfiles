@@ -18,8 +18,8 @@ reboot=' Reiniciar'
 lock=' Bloquear'
 suspend=' Suspender'
 logout=' Encerrar'
-yes=' '
-no=''
+yes=' Sim '
+no=' Não '
 
 # Rofi CMD
 rofi_cmd() {
@@ -37,7 +37,7 @@ confirm_cmd() {
     -theme-str 'textbox {horizontal-align: 0.5;}' \
     -dmenu \
     -p 'Confirmation' \
-    -mesg 'Are you Sure?' \
+    -mesg 'Tem certeza?' \
     -theme "${dir}"/${theme}.rasi
 }
 

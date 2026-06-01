@@ -32,7 +32,10 @@ configuration {
 
 /*****----- Global Properties -----*****/
 @import "~/.config/rofi/catppuccin.rasi"
-@import "~/.config/rofi/fonts.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 14";
+}
 
 * {
     border-colour:               var(selected);
@@ -101,7 +104,7 @@ inputbar {
     spacing:                     10px;
     margin:                      0px;
     padding:                     10px 0px 10px 10px;
-    border:                      0px 0px 1px 0px;
+    border:                      0px 0px 0px 0px;
     border-radius:               0px;
     border-color:                @border-colour;
     background-color:            @background-colour;
