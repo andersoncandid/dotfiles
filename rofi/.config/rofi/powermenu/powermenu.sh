@@ -12,20 +12,14 @@ theme='powermenu'
 # CMDs
 host="$(hostname)"
 
-shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout=''
-
-# Options with text
-# shutdown=' Desligar'
-# reboot=' Reiniciar'
-# lock=' Bloquear'
-# suspend=' Suspender'
-# logout=' Encerrar'
-# yes=' '
-# no=''
+# Options
+shutdown=' Desligar'
+reboot=' Reiniciar'
+lock=' Bloquear'
+suspend=' Suspender'
+logout=' Encerrar'
+yes=' '
+no=''
 
 # Rofi CMD
 rofi_cmd() {
@@ -45,11 +39,6 @@ confirm_cmd() {
 		-p 'Confirmation' \
 		-mesg "$1" \
 		-theme "${dir}/${theme}.rasi"
-}
-
-# Ask shutdown for confirmation
-confirm_shutdown() {
-	echo -e "$yes\n$no" | confirm_cmd ' Desligar?'
 }
 
 # Pass variables to rofi dmenu
@@ -80,38 +69,33 @@ run_cmd() {
   fi
 }
 
-# Direct shutdown confirmation
-if [[ "$1" == "--shutd" ]]; then
-    selected="$(confirm_shutdown)"
-  	if [[ "$selected" == "$yes" ]]; then
-      systemctl poweroff
-    else
-    	exit 0
-    fi
-else
 # Actions
 chosen="$(run_rofi)"
-  case ${chosen} in
-      "$shutdown")
-      run_cmd --shutdown
-          ;;
-      "$reboot")
-      run_cmd --reboot
-          ;;
-      "$lock")
-      if [[ -x '/usr/bin/light-locker' ]]; then
-        light-locker-command -l
-      elif [[ -x '/usr/bin/betterlockscreen' ]]; then
-        betterlockscreen -l
-      elif [[ -x '/usr/bin/i3lock' ]]; then
-        i3lock
-      fi
-          ;;
-      "$suspend")
-      run_cmd --suspend
-          ;;
-      "$logout")
-      run_cmd --logout
-          ;;
-  esac
-fi
+  selected="$(confirm_shutdown)"
+  if [[ "$selected" == "$yes" ]]; then
+    case ${chosen} in
+        "$shutdown")
+        run_cmd --shutdown
+            ;;
+        "$reboot")
+        run_cmd --reboot
+            ;;
+        "$lock")
+        if [[ -x '/usr/bin/light-locker' ]]; then
+          light-locker-command -l
+        elif [[ -x '/usr/bin/betterlockscreen' ]]; then
+          betterlockscreen -l
+        elif [[ -x '/usr/bin/i3lock' ]]; then
+          i3lock
+        fi
+            ;;
+        "$suspend")
+        run_cmd --suspend
+            ;;
+        "$logout")
+        run_cmd --logout
+            ;;
+    esac
+    else
+      exit 0
+  fi

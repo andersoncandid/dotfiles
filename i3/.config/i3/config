@@ -48,8 +48,8 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -216,12 +216,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Set borders config
-for_window [tiling] border pixel 2
+for_window [tiling] border pixel 1
 smart_borders on
-default_border pixel 2
+default_border pixel 1
 
 # Gaps
-gaps inner 8
+gaps inner 6
 gaps outer 0
 smart_gaps on
 
@@ -230,3 +230,39 @@ smart_gaps on
 # bar {
 #         status_command i3status
 # }
+
+set $rosewater #f5e0dc
+set $flamingo  #f2cdcd
+set $pink      #f5c2e7
+set $mauve     #cba6f7
+set $red       #f38ba8
+set $maroon    #eba0ac
+set $peach     #fab387
+set $yellow    #f9e2af
+set $green     #a6e3a1
+set $teal      #94e2d5
+set $sky       #89dceb
+set $sapphire  #74c7ec
+set $blue      #89b4fa
+set $lavender  #b4befe
+set $text      #cdd6f4
+set $subtext1  #bac2de
+set $subtext0  #a6adc8
+set $overlay2  #9399b2
+set $overlay1  #7f849c
+set $overlay0  #6c7086
+set $surface2  #585b70
+set $surface1  #45475a
+set $surface0  #313244
+set $base      #1e1e2e
+set $mantle    #181825
+set $crust     #11111b
+
+# target                   title     bg        text      indicator  border
+client.focused             $sapphire $base     $text     $rosewater $sapphire
+client.focused_inactive    $overlay0 $base     $text     $rosewater $surface0
+client.unfocused           $overlay0 $base     $text     $rosewater $surface0
+client.urgent              $peach    $base     $peach    $overlay0  $peach
+client.placeholder         $overlay0 $base     $text     $overlay0  $mantle
+client.background          $base
+

@@ -16,7 +16,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import "~/.config/rofi/colors.rasi"
+@import "~/.config/rofi/catppuccin.rasi"
 @import "~/.config/rofi/powermenu/powermenu_fonts.rasi"
 
 /*
@@ -27,11 +27,11 @@ USE_BUTTONS=YES
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    east;
-    anchor:                      east;
+    location:                    center;
+    anchor:                      center;
     fullscreen:                  false;
-    width:                       115px;
-    x-offset:                    -15px;
+    width:                       800px;
+    x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
@@ -50,7 +50,7 @@ mainbox {
     enabled:                     true;
     spacing:                     15px;
     margin:                      0px;
-    padding:                     15px;
+    padding:                     30px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
@@ -61,7 +61,7 @@ mainbox {
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
-    spacing:                     0px;
+    spacing:                     15px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
@@ -125,8 +125,8 @@ error-message {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     1;
-    lines:                       5;
+    columns:                     5;
+    lines:                       1;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -151,7 +151,7 @@ element {
     enabled:                     true;
     spacing:                     0px;
     margin:                      0px;
-    padding:                     20px 0px;
+    padding:                     40px 10px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
@@ -160,7 +160,7 @@ element {
     cursor:                      pointer;
 }
 element-text {
-    font:                        "feather bold 24";
+    font:                        "JetBrainsMono Nerd Font 36";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

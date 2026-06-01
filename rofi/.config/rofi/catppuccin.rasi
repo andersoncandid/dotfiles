@@ -2,7 +2,7 @@
 
   // Base mapping
   background:     var(base);
-  background-alt: var(mantle);
+  background-alt: var(surface0);
   foreground:     var(text);
   selected:       var(blue);
   active:         var(blue);
@@ -35,11 +35,4 @@
   base: #1e1e2e;
   mantle: #181825;
   crust: #11111b;
-
-  // TokyoNight
-  // base:    #1a1b26;
-  // mantle:  #16161e;
-  // text:    #a9b1d6;
-  // blue:    #7aa2f7;
-  // red:     #f7768e;
 }
