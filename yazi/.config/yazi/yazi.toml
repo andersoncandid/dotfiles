@@ -1,0 +1,11 @@
+[opener]
+edit = [
+    { run = 'nvim %s', block = true, desc = "Neovim" }
+]
+
+[open]
+prepend_rules = [
+    { mime = "text/*", use = "edit" },
+    { url = "*.json", use = "edit" },
+    { url = "*.md", use = "edit" }
+]

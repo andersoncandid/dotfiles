@@ -15,16 +15,13 @@ set $mod Mod4
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id light-locker
 
-# light-locker(mint locker screen) key
-bindsym $mod+Shift+x exec --no-startup-id light-locker-command -l
-
 exec_always --no-startup-id xcape -e 'Super_L=Escape'
 exec_always --no-startup-id ~/.config/feh/random_wallpaper.sh
 exec --no-startup-id picom
 exec --no-startup-id ~/.config/polybar/launch.sh
 
 # Hide mouse pointer when key is pressed
-exec --no-startup-id xbanish -m se
+# exec --no-startup-id xbanish -m se
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
