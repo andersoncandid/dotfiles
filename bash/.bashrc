@@ -135,10 +135,8 @@ export NVM_DIR="$HOME/.nvm"
 alias rm='rm -i'
 alias mpvv='mpv --no-video'
 
-alias gg='ghostty +list-keybinds'
 alias limpeza='sudo apt autoclean && sudo apt autoremove && sudo apt update && sudo apt upgrade'
 alias tela-off='xset dpms force off'
-alias project='cd Anderson/Projetos/odin_project'
 alias py='pyenv shell 3.14.5'
 
 # External modern programs
@@ -167,6 +165,8 @@ alias vscode-enable='sudo mv /etc/apt/sources.list.d/vscode.sources.disabled /et
 # Version 2
 # PS1="\[\e[1;38;5;111m\]\w\[\e[1;38;5;224m\]\$(__git_ps1 ' 󰘬 %s')\n\[\e[1;38;5;114m\]󰜴 \[\e[0m\]"
 #
-#
+
+source ~/.bash_completion/alacritty
+
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"

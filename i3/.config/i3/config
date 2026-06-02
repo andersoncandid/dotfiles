@@ -12,7 +12,7 @@
 set $mod Mod4
 
 #XFCE4 components
-exec --no-startup-id /usr/lib/x86_64-linux-gnu/xfce4/auth/xfce-polkit
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id light-locker
 
 # light-locker(mint locker screen) key
@@ -63,7 +63,7 @@ tiling_drag modifier titlebar
 #----- Keybinds for aplications -----#
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill

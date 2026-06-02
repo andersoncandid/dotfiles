@@ -1,0 +1,23 @@
+[general]
+import = ["~/.config/alacritty/tokyonight_night.toml"]
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "JetBrainsMonoNL Nerd Font"
+style = "Regular"
+
+[window]
+opacity = 0.95
+padding = { x = 6, y = 6 }
+
+[window.dimensions]
+columns = 160
+lines = 39
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+
+[selection]
+save_to_clipboard = true

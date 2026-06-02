@@ -1,3 +1,7 @@
+## Remove All Keybinds
+
+#keybind=clear
+
 ## Themes Configs
 theme = tokyonight_night.conf
 #theme = catppuccin-mocha.conf
@@ -8,9 +12,6 @@ theme = tokyonight_night.conf
 #theme = Night Owl
 
 background-opacity = 0.95
-
-## Custom Keybinds
-keybind = alt+q=toggle_tab_overview
 
 ## Font Settings
 font-family = JetBrainsMonoNL Nerd Font
