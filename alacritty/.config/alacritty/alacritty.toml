@@ -10,7 +10,7 @@ style = "Regular"
 
 [window]
 opacity = 0.95
-padding = { x = 6, y = 6 }
+padding = { x = 10, y = 10 }
 
 [window.dimensions]
 columns = 160

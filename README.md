@@ -17,6 +17,8 @@ stow <package name>
     - Build from source: [picom](https://github.com/yshui/picom)
 - xcape
     - Install via apt
+- xbanish
+    - Install via apt
 - feh
     - Install via apt
 - polybar
