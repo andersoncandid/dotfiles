@@ -24,7 +24,7 @@ exec --no-startup-id picom
 exec --no-startup-id ~/.config/polybar/launch.sh
 
 # Hide mouse pointer when key is pressed
-exec --no-startup-id xbanish
+exec --no-startup-id xbanish -m se
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -71,8 +71,11 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+q kill
 
-# flameshot printscreen
+# printscreen
 bindsym $mod+F12 exec --no-startup-id xfce4-screenshooter
+
+# Neovim
+bindsym $mod+n exec --no-startup-id alacritty -e nvim
 
 # Brave browser
 bindsym $mod+b exec --no-startup-id i3-msg workspace 2; exec brave-browser-stable;
@@ -81,7 +84,7 @@ bindsym $mod+b exec --no-startup-id i3-msg workspace 2; exec brave-browser-stabl
 bindsym $mod+y exec --no-startup-id alacritty -e yazi
 
 # Thunar - xfce File Manager
-bindsym $mod+n exec --no-startup-id thunar
+bindsym $mod+t exec --no-startup-id thunar
 
 # Start Rofi (a program launcher)
 bindsym $mod+i exec --no-startup-id rofi -show combi
