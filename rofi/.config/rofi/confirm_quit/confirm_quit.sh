@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 # Current Theme
-dir="$HOME/.config/rofi/confirm"
-theme='confirm'
+dir="$HOME/.config/rofi/confirm_quit"
+theme='confirm_quit'
 
 # Options
-yes=' '
-no=''
+yes='✔️'
+no='✖️'
 
 # Confirmation CMD
 confirm_cmd() {

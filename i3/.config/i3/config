@@ -65,8 +65,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-# bindsym $mod+q kill
-bindsym $mod+q exec --no-startup-id ~/.config/rofi/confirm/confirm.sh
+bindsym $mod+q exec --no-startup-id ~/.config/rofi/confirm_quit/confirm_quit.sh
 
 # printscreen
 bindsym $mod+F12 exec --no-startup-id xfce4-screenshooter
