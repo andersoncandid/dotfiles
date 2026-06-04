@@ -38,8 +38,8 @@ vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true })
 --[[ Buffer Keymaps ]]
 
 -- Move to previous/next
-vim.api.nvim_set_keymap('n', '<A-,>', '<Cmd>bprevious<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-.>', '<Cmd>bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-l>', '<Cmd>bprevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-h>', '<Cmd>bnext<CR>', { noremap = true, silent = true })
 
 -- Close buffer
 vim.api.nvim_set_keymap('n', '<A-c>', '<Cmd>bdelete<CR>', { noremap = true, silent = true })

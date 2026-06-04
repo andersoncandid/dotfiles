@@ -15,7 +15,6 @@ set $mod Mod4
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id light-locker
 
-exec_always --no-startup-id xcape -e 'Super_L=Escape'
 exec_always --no-startup-id ~/.config/feh/random_wallpaper.sh
 exec --no-startup-id picom
 exec --no-startup-id ~/.config/polybar/launch.sh
@@ -66,7 +65,8 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+q kill
+# bindsym $mod+q kill
+bindsym $mod+q exec --no-startup-id ~/.config/rofi/confirm/confirm.sh
 
 # printscreen
 bindsym $mod+F12 exec --no-startup-id xfce4-screenshooter
