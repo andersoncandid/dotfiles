@@ -52,6 +52,7 @@ require('lazy').setup({
 
   -- [[ Other Plugins ]]
   { import = 'plugins.ui.lualine' },
+  { import = 'plugins.ui.tmux-navigation' },
   -- { import = 'plugins.ui.barbar' },
   { import = 'plugins.coding.autotag' },
   { import = 'plugins.coding.treesitter-context' },
