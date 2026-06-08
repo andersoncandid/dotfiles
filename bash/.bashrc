@@ -170,6 +170,10 @@ alias vscode-enable='sudo mv /etc/apt/sources.list.d/vscode.sources.disabled /et
 # Version 2
 # PS1="\[\e[1;38;5;111m\]\w\[\e[1;38;5;224m\]\$(__git_ps1 ' 󰘬 %s')\n\[\e[1;38;5;114m\]󰜴 \[\e[0m\]"
 
+# Disable Ctrl+S (XOFF/XON)
+stty -ixon
+bind -r "\C-s"
+
 source ~/.bash_completion/alacritty
 
 eval "$(starship init bash)"
