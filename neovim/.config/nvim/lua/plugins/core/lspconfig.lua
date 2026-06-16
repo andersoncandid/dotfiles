@@ -238,8 +238,8 @@ return {
         'json-lsp', -- json
         'lua-language-server', -- lua
         'pyright', -- python
-        'vtsls', -- javascript/typescript
-        -- 'typescript-language-server', -- js/ts
+        'vtsls', -- javascript/typescript Modern
+        -- 'typescript-language-server', -- js/ts classic(old) lsp
 
         -- Formatters
         'stylua',
