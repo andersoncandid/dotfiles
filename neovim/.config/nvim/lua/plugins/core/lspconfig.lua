@@ -209,28 +209,6 @@ return {
 
         vtsls = {}, -- js/ts Modern option
 
-        -- Vale for prose check
-        vale_ls = {
-          filetypes = {
-            'markdown',
-            'text',
-            'gitcommit',
-            'mail',
-            'plaintex',
-            'tex', -- LaTeX documents
-            'rst', -- Sphinx/Python documentation
-            'html',
-            'xml',
-            'asciidoc', -- Robust technical documentation
-          },
-          init_options = {
-            -- Prevent the LSP from attempting to download the binary.
-            installVale = false,
-            syncOnStartup = true,
-            configPath = vim.fn.expand('~/.config/vale/.vale.ini'),
-          },
-        },
-
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -261,8 +239,7 @@ return {
         'lua-language-server', -- lua
         'pyright', -- python
         'vtsls', -- javascript/typescript
-        -- 'typescript-language-server', -- js/ts old
-        'vale-ls', -- prose
+        -- 'typescript-language-server', -- js/ts
 
         -- Formatters
         'stylua',

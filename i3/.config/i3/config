@@ -68,7 +68,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # printscreen
-bindsym $mod+F12 exec --no-startup-id xfce4-screenshooter
+bindsym Print exec --no-startup-id xfce4-screenshooter
 
 # Neovim
 bindsym $mod+n exec --no-startup-id alacritty -e nvim

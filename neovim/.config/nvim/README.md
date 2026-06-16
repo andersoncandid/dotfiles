@@ -21,13 +21,6 @@
   - Javascript/Typescript: 'npm'
   - Python: 'pip'
   - Any other language you may use...
-- Linting to prose:
-  - [Vale](https://docs.vale.sh/)
-  - Config file:$HOME/.config/vale
-  - To install package, run:
-    ```sh
-    vale sync
-    ```
 
 #### Clone Configuration
 
