@@ -118,6 +118,9 @@ fi
 
 ###=====Personal Configs=====###
 
+# Custom keybind for nvim and fzf
+bind -x '"\C-f": fileFound="$(fzf)"; [ -n "$fileFound" ] && nvim "$fileFound"'
+
 # Custom Environment Variables
 export PATH="$HOME/.local/bin:$PATH"
 export FZF_DEFAULT_OPTS="--height=60%"

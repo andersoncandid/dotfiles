@@ -11,9 +11,12 @@
 
 set $mod Mod4
 
-#XFCE4 components
+#== XFCE4 components ==#
+
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id light-locker
+
+#====================#
 
 exec_always --no-startup-id ~/.config/feh/random_wallpaper.sh
 exec --no-startup-id picom
@@ -59,7 +62,7 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-#----- Keybinds for aplications -----#
+#===== Keybinds for aplications =====#
 
 # start a terminal
 bindsym $mod+Return exec alacritty
@@ -69,9 +72,6 @@ bindsym $mod+Shift+q kill
 
 # printscreen
 bindsym Print exec --no-startup-id xfce4-screenshooter
-
-# Neovim
-bindsym $mod+n exec --no-startup-id alacritty -e nvim
 
 # Brave browser
 bindsym $mod+b exec --no-startup-id i3-msg workspace 2; exec brave-browser-stable;
@@ -89,6 +89,7 @@ bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # Rofi powermenu
 bindsym $mod+Escape exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
+
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
