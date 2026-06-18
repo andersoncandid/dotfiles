@@ -21,6 +21,13 @@ set -g mouse on
 set -g default-terminal "tmux-256color"
 set -as terminal-features ",xterm-256color:RGB"
 
+# True Color support for terminals
+# NOTE: Force terminal to use True Colors
+# Use below configs or set $TERM = "xterm-256color" in terminal configs
+
+# set -as terminal-features ",xterm-kitty:RGB,xterm-256color:RGB"
+# set -ga terminal-overrides ",xterm-kitty:Tc,xterm-256color:Tc"
+
 #=== KeyBindings ===#
 
 # Change prefix
@@ -74,17 +81,31 @@ set -g set-clipboard on
 
 #=== Appearance ===#
 
-# --Status bar default custom--
 set -g status-position top
-set -g status-style bg="default"
-set -g status-right ""
-set -g pane-border-style 'fg=#585b70,bg=default'
-set -g pane-active-border-style 'fg=#89b4fa,bg=default'
+
+# set -g @tmux_power_theme 'gold'
+set -g @tmux_power_right_arrow_icon ''
+set -g @tmux_power_left_arrow_icon  ''
+set -g @tmux_power_left_a  ''
+set -g @tmux_power_left_b  ''
+set -g @tmux_power_left_c  ''
+set -g @tmux_power_right_x ' #S'
+set -g @tmux_power_right_y ''
+set -g @tmux_power_right_z ''
+
+# Catppuccin mocha
+set -g @tmux_power_theme '#89b4fa' #Blue
+set -g @tmux_power_g0 "#1e1e2e"
+set -g @tmux_power_g1 "#1e1e2e"
+set -g @tmux_power_g2 "#313244"
+set -g @tmux_power_g3 "#585b70"
+set -g @tmux_power_g4 "#181825"
 
 #=== Plugins ===#
 
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'wfxr/tmux-power'
 
 set -g status-right-length 100
 
