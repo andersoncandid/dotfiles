@@ -227,7 +227,7 @@ smart_borders on
 default_border pixel 1
 
 # Gaps
-gaps inner 6
+gaps inner 4
 gaps outer 0
 smart_gaps on
 
