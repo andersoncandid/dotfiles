@@ -26,9 +26,9 @@ return {
   priority = 1000,
   config = function()
     require('catppuccin').setup({
-      transparent_background = true,
+      transparent_background = false,
       float = {
-        transparent = true, -- enable transparent floating windows
+        transparent = false, -- enable transparent floating windows
         solid = false, -- use solid styling for floating windows, see |winborder|
       },
       -- dim_inactive = {
@@ -75,7 +75,7 @@ return {
   -- config = function()
   --   require('nightfox').setup({
   --     options = {
-  --       transparent = true,
+  --       transparent = false,
   --       dim_inactive = false,
   --       styles = {
   --         comments = '',
@@ -174,7 +174,7 @@ return {
   --   vim.g.gruvbox_material_disable_italic_comment = 1
   --   -- vim.g.gruvbox_material_background = 'hard'
   --   vim.g.gruvbox_material_foreground = 'mix'
-  --   vim.g.gruvbox_material_transparent_background = 1
+  --   -- vim.g.gruvbox_material_transparent_background = 1
   --   vim.cmd.colorscheme('gruvbox-material')
   -- end,
 }
