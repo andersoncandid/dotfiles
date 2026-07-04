@@ -1,6 +1,9 @@
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Save buffer
+vim.keymap.set('n', '<leader>w', '<Cmd>w<CR>', { desc = '[W]rite current buffer' })
+
 -- [[ Diagnostic keymaps ]]
 
 -- Uncomment if don`t` use Trouble plugin
