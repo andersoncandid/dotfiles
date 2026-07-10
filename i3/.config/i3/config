@@ -71,7 +71,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # printscreen
-bindsym Print exec --no-startup-id xfce4-screenshooter
+bindsym Print exec --no-startup-id xfce4-screenshooter -f -s ~/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
 
 # Brave browser
 bindsym $mod+b exec --no-startup-id i3-msg workspace 2; exec brave-browser-stable;
