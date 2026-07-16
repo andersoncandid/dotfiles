@@ -244,11 +244,11 @@ return {
         -- Formatters
         'stylua',
         'clang-format',
-        -- 'biome',
         'black',
         'isort',
         'prettierd', -- formatter
         'prettier', -- formatter
+        'shfmt', -- shell formatter
 
         -- Linters [Uncomment if Linter is enable]
         -- 'eslint_d',
