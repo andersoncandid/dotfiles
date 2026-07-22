@@ -47,16 +47,42 @@ return {
     vim.cmd.colorscheme('catppuccin-mocha')
   end,
 
+  ---------------------------------------------------------
+
+  -- 'rebelot/kanagawa.nvim',
+  -- priority = 1000,
+  -- config = function()
+  --   require('kanagawa').setup({
+  --     undercurl = false,
+  --     commentStyle = { italic = false },
+  --     keywordStyle = { italic = false },
+  --     statementStyle = { bold = false },
+  --     typeStyle = { bold = false },
+  --     transparent = false,
+  --     dimInactive = false,
+  --     colors = {
+  --       theme = {
+  --         all = {
+  --           ui = {
+  --             bg_gutter = 'none',
+  --           },
+  --         },
+  --       },
+  --     },
+  --   })
+  --   vim.cmd('colorscheme kanagawa')
+  -- end,
+
   ----------------------------------------------------------
 
   -- 'navarasu/onedark.nvim',
   -- priority = 1000,
   -- config = function()
   --   require('onedark').setup({
-  --     transparent = true,
-  --     -- style = 'darker',
+  --     transparent = false,
+  --     style = 'darker',
   --     -- style = 'deep',
-  --     style = 'cool',
+  --     -- style = 'cool',
   --     -- style = 'warmer',
   --     code_style = {
   --       comments = 'none',
@@ -88,32 +114,6 @@ return {
 
   ---------------------------------------------------------
 
-  -- 'rebelot/kanagawa.nvim',
-  -- priority = 1000,
-  -- config = function()
-  --   require('kanagawa').setup({
-  --     undercurl = false,
-  --     commentStyle = { italic = false },
-  --     keywordStyle = { italic = false },
-  --     statementStyle = { bold = false },
-  --     typeStyle = { bold = false },
-  --     transparent = true,
-  --     dimInactive = false,
-  --     colors = {
-  --       theme = {
-  --         all = {
-  --           ui = {
-  --             bg_gutter = 'none',
-  --           },
-  --         },
-  --       },
-  --     },
-  --   })
-  --   vim.cmd('colorscheme kanagawa')
-  -- end,
-
-  ---------------------------------------------------------
-
   -- 'projekt0n/github-nvim-theme',
   -- name = 'github-theme',
   -- lazy = false,
@@ -131,18 +131,6 @@ return {
   --   })
   --
   --   vim.cmd('colorscheme github_dark_default')
-  -- end,
-
-  ---------------------------------------------------------
-
-  -- 'Mofiqul/dracula.nvim',
-  -- priority = 1000,
-  -- config = function()
-  --   require('dracula').setup({
-  --     transparent_bg = true,
-  --     lualine_bg_color = '#44475a',
-  --   })
-  --   vim.cmd.colorscheme('dracula')
   -- end,
 
   ---------------------------------------------------------
@@ -173,7 +161,6 @@ return {
   --   -- vim.g.gruvbox_material_dim_inactive_windows = 1
   --   vim.g.gruvbox_material_disable_italic_comment = 1
   --   -- vim.g.gruvbox_material_background = 'hard'
-  --   vim.g.gruvbox_material_foreground = 'mix'
   --   -- vim.g.gruvbox_material_transparent_background = 1
   --   vim.cmd.colorscheme('gruvbox-material')
   -- end,

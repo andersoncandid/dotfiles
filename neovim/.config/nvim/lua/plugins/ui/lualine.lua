@@ -8,7 +8,6 @@ return {
         theme = 'catppuccin-mocha',
         -- theme = 'onedark',
         -- theme = 'gruvbox-material',
-        -- theme = 'dracula-nvim',
 
         -- section_separators = { left = "", right = "" },
         -- component_separators = { left = "", right = "" },

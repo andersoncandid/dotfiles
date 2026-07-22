@@ -17,6 +17,8 @@ stow <package name>
 - feh
 - polybar
 - rofi
+- lxappearance
+
 ### Other sources
 - picom
     - Build from source: [yshui/picom](https://github.com/yshui/picom)
