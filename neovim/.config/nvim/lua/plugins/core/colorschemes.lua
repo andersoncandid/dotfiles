@@ -80,10 +80,10 @@ return {
   -- config = function()
   --   require('onedark').setup({
   --     transparent = false,
-  --     style = 'darker',
+  --     -- style = 'darker',
   --     -- style = 'deep',
   --     -- style = 'cool',
-  --     -- style = 'warmer',
+  --     style = 'warmer',
   --     code_style = {
   --       comments = 'none',
   --     },
@@ -109,7 +109,7 @@ return {
   --     },
   --   })
   --
-  --   vim.cmd('colorscheme nightfox')
+  --   vim.cmd('colorscheme carbonfox')
   -- end,
 
   ---------------------------------------------------------
