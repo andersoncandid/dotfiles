@@ -36,7 +36,7 @@ disabled = ${colors.overlay0}
 
 [bar/main]
 width = 100%
-height = 19pt
+height = 22pt
 radius = 0
 
 fixed-center = true
@@ -59,8 +59,8 @@ module-margin = 1
 separator = |
 separator-foreground = ${colors.disabled}
 
-font-0 = "JetBrainsMono Nerd Font:style=Medium:size=11;3"
-font-1 = "JetBrainsMono Nerd Font:style=Medium:size=12;3"
+font-0 = "JetBrainsMono Nerd Font:style=Medium:size=12;3"
+font-1 = "JetBrainsMono Nerd Font:style=Medium:size=13;3"
 
 modules-left = i3 xwindow
 modules-center =
@@ -162,7 +162,6 @@ label-mode-padding = 2
 label-mode-foreground = #000000
 label-mode-background = ${colors.alert}
 
-# label-focused = %{T2}%{T-}
 label-focused = %index%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background-alt}
@@ -177,9 +176,20 @@ label-urgent-foreground = ${colors.alert}
 label-urgent-background = ${colors.base}
 label-urgent-padding = 1
 
-label-separator = " "
+label-separator =
 label-separator-padding = 0
-label-separator-foreground = ${colors.disabled}
+label-separator-foreground =
+
+[module/polypomo]
+type = custom/script
+exec = ~/.config/polybar/modules/polypomo
+tail = true
+label = %output%
+click-left = ~/.config/polybar/modules/polypomo toggle
+click-right = ~/.config/polybar/modules/polypomo end
+click-middle = ~/.config/polybar/modules/polypomo lock
+scroll-up = ~/.config/polybar/modules/polypomo time +60
+scroll-down = ~/.config/polybar/modules/polypomo time -60
 
 [settings]
 screenchange-reload = true
