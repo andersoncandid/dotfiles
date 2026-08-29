@@ -139,6 +139,7 @@ export NVM_DIR="$HOME/.nvm"
 # Custom Alias
 alias rm='rm -i'
 alias mpvv='mpv --no-video'
+alias mpvs='mpv --shuffle'
 
 alias limpeza='sudo apt autoclean && sudo apt autoremove && sudo apt update && sudo apt upgrade'
 alias tela-off='xset dpms force off'
