@@ -78,7 +78,7 @@ bindsym Print exec --no-startup-id xfce4-screenshooter -f -s ~/screenshot-$(date
 bindsym $mod+p exec --no-startup-id "killall picom && notify-send 'Picom OFF' -i display || (picom -b && notify-send 'Picom ON' -i display)"
 
 # Brave browser
-bindsym $mod+b exec --no-startup-id i3-msg workspace 2; exec brave-browser-stable;
+bindsym $mod+b exec --no-startup-id "i3-msg 'workspace 2; exec brave-browser'"
 
 # Yazi - CLI File Manager
 bindsym $mod+y exec --no-startup-id alacritty -e yazi
