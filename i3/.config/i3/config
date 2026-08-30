@@ -73,6 +73,10 @@ bindsym $mod+Shift+q kill
 # printscreen
 bindsym Print exec --no-startup-id xfce4-screenshooter -f -s ~/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
 
+# xsct (Temp of screen light - Night Mode)
+bindsym $mod+Shift+bracketleft exec --no-startup-id xsct 0
+bindsym $mod+Shift+bracketright exec --no-startup-id xsct 3500
+
 # Turn Picom on/off for gaming
 # Ligar/Desligar o Picom e enviar notificação via XFCE
 bindsym $mod+p exec --no-startup-id "killall picom && notify-send 'Picom OFF' -i display || (picom -b && notify-send 'Picom ON' -i display)"
