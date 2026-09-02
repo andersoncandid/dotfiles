@@ -75,7 +75,7 @@ bindsym Print exec --no-startup-id xfce4-screenshooter -f -s ~/screenshot-$(date
 
 # xsct (Temp of screen light - Night Mode)
 bindsym $mod+Shift+bracketleft exec --no-startup-id xsct 0
-bindsym $mod+Shift+bracketright exec --no-startup-id xsct 3500
+bindsym $mod+Shift+bracketright exec --no-startup-id xsct 4000
 
 # Turn Picom on/off for gaming
 # Ligar/Desligar o Picom e enviar notificação via XFCE
@@ -273,7 +273,7 @@ set $mantle    #181825
 set $crust     #11111b
 
 # target                   title     bg        text      indicator  border
-client.focused             $sapphire $base     $text     $rosewater $sapphire
+client.focused             $sapphire $base     $text     $rosewater $lavender
 client.focused_inactive    $overlay0 $base     $text     $rosewater $surface0
 client.unfocused           $overlay0 $base     $text     $rosewater $surface0
 client.urgent              $peach    $base     $peach    $overlay0  $peach

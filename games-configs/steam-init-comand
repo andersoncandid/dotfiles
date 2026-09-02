@@ -1,3 +1,0 @@
-For gamming on i3wm with picom:
-
-  killall picom; gamemoderun mangohud %command%; picom -b
