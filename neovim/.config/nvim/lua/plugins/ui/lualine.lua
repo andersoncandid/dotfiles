@@ -4,8 +4,8 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        -- theme = 'tokyonight-night',
-        theme = 'catppuccin-mocha',
+        theme = 'tokyonight-night',
+        -- theme = 'catppuccin-mocha',
         -- theme = 'onedark',
         -- theme = 'gruvbox-material',
 
