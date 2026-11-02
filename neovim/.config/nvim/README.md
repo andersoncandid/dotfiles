@@ -2,11 +2,6 @@
 
 **My Personal Neovim IDE Configuration**
 
-> Built on Kickstart.nvim project with Structured Setup for plugins.
-
-> [!NOTE]  
-> The following installation method is adapted from kickstart.nvim:
-
 ### External Requirements
 
 - Core Tools: `git`, `make`, `unzip`, C Compiler (`gcc`)
